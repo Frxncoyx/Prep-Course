@@ -260,14 +260,19 @@ function breakStatement(numero) {
 
 
     var array = [];
-    var suma = 0;
+    var suma = numero;
     for (var i = 0; i < 10; i++) {
 
-        array.push(numero += 2);
-        suma += numero;
-        if (suma == 10) {
-            return "Se interrumpió la ejecución";
+
+
+        suma = suma + 2;
+        if (suma === i) break;
+        else {
+            array.push(suma);
         }
+    }
+    if (i < 10) {
+        return "Se interrumpió la ejecución";
     }
     return array;
 
